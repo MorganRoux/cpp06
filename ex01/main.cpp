@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 23:42:29 by mroux             #+#    #+#             */
-/*   Updated: 2021/06/29 00:49:09 by mroux            ###   ########.fr       */
+/*   Updated: 2021/06/29 00:51:12 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,9 +101,11 @@ int main()
 	std::cout << data.str1 << " - " << data.str2 << " - " << data.str3 << " - " << data.i << " - " << data.sh << std::endl;
 	std::cout << "Dump struct :" << std::endl;
 	dump(reinterpret_cast<char *>(&data));
+
 	ptr = serialize(&data);
 	std::cout << "Dump serial :" << std::endl;
 	dump(reinterpret_cast<char *>(ptr));
+
 	pdata = deserialize(ptr);
 	std::cout << "Dump deserialized :" << std::endl;
 	dump(reinterpret_cast<char *>(pdata));
