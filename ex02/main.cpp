@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 19:59:09 by mroux             #+#    #+#             */
-/*   Updated: 2021/06/29 20:16:06 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/06 17:24:21 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,22 +48,26 @@ void	identify(Base& p)
 	A a;
 	B b;
 	C c;
+	A& a = dynamic_cast<A&>(p);
+	B& b = dynamic_cast<B&>(p);
+	C& c = dynamic_cast<C&>(p);
 
-	std::cout << "&" << std::endl;
-	try {
-		a = dynamic_cast<A&>(p);
-		std::cout << "A" << std::endl;
-	} catch (std::bad_cast & e) {
-	try {
-		b = dynamic_cast<B&>(p);
-		std::cout << "B" << std::endl;
-	} catch (std::bad_cast & e) {
-	try {
-		c = dynamic_cast<C&>(p);
-		std::cout << "C" << std::endl;
-	} catch (std::bad_cast & e){
 
-	}}}
+	// std::cout << "&" << std::endl;
+	// try {
+	// 	a = dynamic_cast<A&>(p);
+	// 	std::cout << "A" << std::endl;
+	// } catch (std::bad_cast & e) {
+	// try {
+	// 	b = dynamic_cast<B&>(p);
+	// 	std::cout << "B" << std::endl;
+	// } catch (std::bad_cast & e) {
+	// try {
+	// 	c = dynamic_cast<C&>(p);
+	// 	std::cout << "C" << std::endl;
+	// } catch (std::bad_cast & e){
+
+	// }}}
 }
 
 int main(void)
