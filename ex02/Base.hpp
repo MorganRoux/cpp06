@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 19:55:49 by mroux             #+#    #+#             */
-/*   Updated: 2021/07/06 17:47:02 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/06 17:54:04 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,23 +27,14 @@ class Base
 
 class A : public Base
 {
-	public:
-		virtual ~A();
-
 };
 
 class B : public Base
 {
-	public:
-		virtual ~B();
-
 };
 
 class C : public Base
 {
-	public:
-		virtual ~C();
-
 };
 
 Base	*generate(void);
