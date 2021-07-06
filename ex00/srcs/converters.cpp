@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 22:12:51 by mroux             #+#    #+#             */
-/*   Updated: 2021/06/28 22:58:12 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/06 17:00:44 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void fromInt(std::string const &str)
 {
-	double d = stod(str);
+	double d = strtod(str.c_str(), NULL);
 
 	if ( d < 0. || d > 255.)
 		std::cout << "char: overflow" << std::endl;
@@ -46,7 +46,7 @@ void fromChar(std::string const &str)
 
 void fromFloat(std::string const &str)
 {
-	double d = stod(str);
+	double d = strtod(str.c_str(), NULL);
 	if (!str.compare("nanf"))
 	{
 		std::cout << "char: impossible" << std::endl;
@@ -73,7 +73,7 @@ void fromFloat(std::string const &str)
 
 void fromDouble(std::string const &str)
 {
-	double d = stod(str);
+	double d = strtod(str.c_str(), NULL);
 
 	if (!str.compare("nan"))
 	{

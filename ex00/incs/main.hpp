@@ -6,11 +6,13 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 21:04:04 by mroux             #+#    #+#             */
-/*   Updated: 2021/06/28 22:47:11 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/06 16:57:26 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <cstring>
+#include <cstdlib>
 #include "limits.h"
 
 typedef enum		e_type
